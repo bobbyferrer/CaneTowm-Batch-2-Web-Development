@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Material icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Font awesome CDN -->
+  <script src="https://kit.fontawesome.com/6a79530112.js" crossorigin="anonymous"></script>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <title>Navbar</title>
+</head>
+<body class="lime lighten-3">
+  <!-- Standard Menu -->
+  <!-- <nav class="orange">
+      <div class="nav-wrapper">
+        <div class="container">
+          <a href="#" class="brand-logo center">Logo</a>
+          <ul id="nav-mobile" class="right hide-on-small-and-down">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li class="active">
+              <a href="floating-btn.html">About</a>
+            </li>
+            <li><a href="colors.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+  </nav> -->
+  <!-- Responsive with side nav -->
+  <nav class="blue darken-4">
+    <div class="nav-wrapper">
+      <div class="container">
+        <a href="#" class="brand-logo center">Sidenav</a>
+        <a href="#" data-target="slide-out" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+          <ul id="nav-mobile" class="right hide-on-small-and-down">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li class="active">
+              <a href="floating-btn.html">About</a>
+            </li>
+            <li><a href="colors.html">Contact</a></li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+  <ul id="slide-out" class="sidenav">
+    <li>
+      <div class="user-view">
+        <div class="background">
+          <img src="images/web1.jpg">
+        </div>
+        <a href="#user"><img class="circle" src="images/web2.jpg"></a>
+        <a href="#name"><span class="white-text name">John Doe</span></a>
+        <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+      </div>
+    </li>
+      <li>
+        <a href="#!">
+          <i class="material-icons">cloud</i>
+          First Link With Icon
+        </a>
+      </li>
+        <li>
+          <a href="#!">Second Link</a>
+        </li>
+        <li>
+          <div class="divider"></div>
+        </li>
+        <li>
+          <a class="subheader">Subheader</a>
+        </li>
+        <li>
+           <a class="waves-effect" href="#!">Third Link With Waves</a>
+        </li>
+    </ul>
+  <div class="container">
+    <h1 class="grey-text text-darken-4">Navbar</h1>
+  </div>
+
+
+
+  <!-- Jquery CDN -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
+
+<script>
+  $(document).ready(function(){
+    $('.sidenav').sidenav({
+      edge: 'right',
+      inDuration: 100
+    });
+  });
+</script>
+</body>
+</html>
