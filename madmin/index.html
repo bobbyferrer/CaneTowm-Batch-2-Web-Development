@@ -245,6 +245,12 @@
     </div>
   </section>
 
+  <!-- Footer -->
+  <footer class="section blue darken-2 white-text center">
+    <p>Madmin Panel Copyright &copy; 2021</p>
+  </footer>
+
+
   <!-- Loader -->
   <div class="preloader-wrapper big active loader">
     <div class="spinner-layer spinner-blue-only">
@@ -257,13 +263,111 @@
       </div>
     </div>
   </div>
-  
- 
+
+  <!-- Fixed ACtion Button -->
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large red">
+      <i class="material-icons">add</i>
+    </a>
+    <ul>
+      <li>
+        <a href="#post-modal" class="btn-floating blue modal-trigger">
+          <i class="material-icons">mode_edit</i>
+        </a>
+      </li>
+      <li>
+        <a href="#category-modal" class="modal-trigger btn-floating blue">
+          <i class="material-icons">folder</i></a>
+      </li>
+      <li>
+        <a href="#users-modal" class="modal-trigger btn-floating blue">
+          <i class="material-icons">supervisor_account</i></a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Add Post Modal -->
+  <div id="post-modal" class="modal">
+    <div class="modal-content">
+      <h4>Add Post</h4>
+      <form>
+        <div class="input-field">
+          <input type="text" id="title">
+          <label for="title">Title</label>
+        </div>
+        <div class="input-field">
+          <select>
+            <option value="" disabled selected>Select Option</option>
+            <option value="">Web Development</option>
+            <option value="">Web Design</option>
+            <option value="">Mobile Development</option>
+            <option value="">Other</option>
+          </select>
+          <label>Category</label>
+        </div>
+        <div class="input-field">
+          <textarea name="body" id="body" class="materialize-textarea"></textarea>
+          <label for="body"></label>
+        </div>
+      </form>
+      <div class="modal-footer">
+        <a href="#" class="modal-action modal-close btn blue white-text">Submit</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Category Modal -->
+  <div id="category-modal" class="modal">
+    <div class="modal-content">
+      <h4>Add Category</h4>
+      <form>
+        <div class="input-field">
+          <input type="text" id="title">
+          <label for="">Title</label>
+        </div>
+      </form>
+      <div class="modal-footer">
+        <a href="#" class="modal-action btn blue white-text">Submit</a>
+      </div>
+    </div>
+  </div>
+
+ <!-- Add user modal -->
+ <div id="users-modal" class="modal">
+   <div class="modal-content">
+     <h4>Add User</h4>
+     <form>
+       <div class="input-field">
+         <input type="text" id="name">
+         <label for="name">Name</label>
+       </div>
+       <div class="input-field">
+         <input type="email" id="email">
+         <label for="email">Email</label>
+       </div>
+       <div class="input-field">
+         <input type="password" id="password">
+         <label for="password">Password</label>
+       </div>
+       <div class="input-field">
+         <input type="password" id="password2">
+         <label for="password2">Confirm Password</label>
+       </div>
+     </form>
+     <div class="modal-footer">
+       <a href="#" class="modal-action modal-close btn blue white-text">Submit</a>
+      </div>
+   </div>
+ </div>
  <!-- Jquery CDN -->
  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- Canvas.js CDN -->
   <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <!-- ckEditor -->
+  <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+  <!-- Chart JS -->
   <script src="js/chart.js"></script>
      
   <script>
@@ -283,7 +387,15 @@
           M.toast({html: 'Denied'});
           e.preventDefault();
         });
-      // Sidenav
+        // Fixed action Btn 
+        $('.fixed-action-btn').floatingActionButton();
+        // Modal
+        $('.modal').modal();
+        // ckEditor
+        CKEDITOR.replace('body');
+        // Select init
+        $('select').formSelect();
+        // Sidenav
         $('.sidenav').sidenav();
         // Counter
         $('.count').each(function() {
