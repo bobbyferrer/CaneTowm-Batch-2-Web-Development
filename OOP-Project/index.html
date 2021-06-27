@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <title>Book List</title>
+  <style>
+    .success, .error {
+      color: white;
+      padding: 5px;
+      margin: 5px 0 15px 0;
+    }
+
+    .success {
+      background: green;
+    }
+    .error {
+      background: red;
+    }
+  </style>
+</head>
+<body class="grey lighten-2">
+  
+  <div class="container">
+    <h1 class="grey-text text-darken-4">Add Book</h1>
+     <form id="book-form">
+       <div class="input-field">
+         <input type="text" id="title">
+         <label for="title">Title</label>
+       </div>
+       <div class="input-field">
+         <input type="text" id="author">
+         <label for="author">Author</label>
+       </div>
+       <div class="input-field">
+         <input type="text" id="isbn">
+         <label for="isbn">ISBN#</label>
+       </div>
+       <input type="submit" class="btn black">
+     </form>
+     <table class="striped">
+       <thead>
+         <tr>
+           <th>Title</th>
+           <th>Author</th>
+           <th>ISBN</th>
+           <th></th>
+         </tr>
+       </thead>
+       <tbody id="book-list">
+         
+       </tbody>
+     </table>
+  </div>
+
+   <!-- Jquery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   <script src="app.js"></script>
+</body>
+</html>
